@@ -5,7 +5,7 @@ import os
 os.environ.setdefault("POSTGRES_DB", "unused")
 os.environ.setdefault("POSTGRES_USER", "unused")
 os.environ.setdefault("POSTGRES_PASSWORD", "unused")
-
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # Existing production security settings
 from .production import *  # noqa: F403
 
